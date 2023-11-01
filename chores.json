@@ -1,0 +1,56 @@
+[
+  {
+    "description": "Voltar para a cidade natal",
+    "isCompleted": true,
+    "deadline": [
+      2023,
+      10,
+      7
+    ]
+  },
+  {
+    "description": "Assistir a aula de Gestao do Ciclo de Vida da Aplicacao",
+    "isCompleted": false,
+    "deadline": [
+      2023,
+      10,
+      11
+    ]
+  },
+  {
+    "description": "Entregar a atividade proposta",
+    "isCompleted": false,
+    "deadline": [
+      2023,
+      10,
+      18
+    ]
+  },
+  {
+    "description": "Testing write on file feature",
+    "isCompleted": false,
+    "deadline": [
+      2023,
+      10,
+      25
+    ]
+  },
+  {
+    "description": "Chore #01",
+    "isCompleted": false,
+    "deadline": [
+      2023,
+      10,
+      30
+    ]
+  },
+  {
+    "description": "Chore #03",
+    "isCompleted": true,
+    "deadline": [
+      2023,
+      10,
+      26
+    ]
+  }
+]

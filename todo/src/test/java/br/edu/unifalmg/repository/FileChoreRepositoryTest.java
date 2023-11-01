@@ -74,4 +74,28 @@ public class FileChoreRepositoryTest {
                 () -> assertEquals(LocalDate.now().minusDays(5), chores.get(1).getDeadline())
         );
     }
+
+    @Test
+    @DisplayName("#save > When unable to write the chores on the file > Return false")
+    void saveWhenUnableToWriteTheChoresOnTheFileReturnFalse() throws IOException {
+        Mockito.doThrow(IOException.class)
+                .when(mapper).writeValue(Mockito.any(File.class), Mockito.any());
+
+        List<Chore> chores = new ArrayList<>();
+        boolean response = repository.save(chores);
+
+        assertFalse(response);
+    }
+
+    @Test
+    @DisplayName("#save > When able to write the chores on the file > Return true")
+    void saveWhenAbleToWriteTheChoresOnTheFileReturnTrue() throws IOException {
+        Mockito.doNothing().when(mapper).writeValue(Mockito.any(File.class), Mockito.any());
+
+        List<Chore> chores = new ArrayList<>();
+        boolean response = repository.save(chores);
+
+        assertTrue(response);
+    }
+
 }

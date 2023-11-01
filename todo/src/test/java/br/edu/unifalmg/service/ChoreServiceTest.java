@@ -291,4 +291,18 @@ public class ChoreServiceTest {
         assertTrue(loadChores.isEmpty());
     }
 
+    @Test
+    @DisplayName("#saveChores > When the save is successful > Return True")
+    void saveChoresWhenTheSaveIsSuccessfulReturnTrue(){
+        Mockito.when(repository.save(service.getChores())).thenReturn(true);
+        assertTrue(service.saveChores());
+    }
+
+    @Test
+    @DisplayName("#saveChores > When the save is not successful > Return False")
+    void saveChoresWhenTheSaveIsNotSuccessfulReturnFalse(){
+        Mockito.when(repository.save(service.getChores())).thenReturn(false);
+        assertFalse(service.saveChores());
+    }
+
 }
